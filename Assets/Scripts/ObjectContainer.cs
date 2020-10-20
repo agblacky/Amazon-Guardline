@@ -8,6 +8,7 @@ public class ObjectContainer : MonoBehaviour
     public bool isfull;
     public GameManager gamemanager;
     public Image backgroundimage;
+    public SpawnPoint spawnPoint;
     private void Start()
     {
         gamemanager = GameManager.instance;

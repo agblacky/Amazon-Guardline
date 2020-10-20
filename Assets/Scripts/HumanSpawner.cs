@@ -14,6 +14,7 @@ public class HumanSpawner : MonoBehaviour
             if (human.isSpawned == false && human.spawnTime < Time.time)
             {
                 GameObject humanInstance = Instantiate(prefabs[(int)human.humanType],transform.GetChild(human.spawner).transform);
+                transform.GetChild(human.spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
                 human.isSpawned = true; 
             }
         }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HumanController : MonoBehaviour
 {
-    public int Health;
-    public int Damage;
+    public int health;
+    public int damage;
     public float movementSpeed;
     private bool isColliding;
     private void Update()
@@ -21,6 +21,17 @@ public class HumanController : MonoBehaviour
         if (collision.gameObject.layer == 10)
         {
             isColliding = true;
+        }
+    }
+    public void ReceiveDamage(int damage)
+    {
+        if (this.health - damage <= 0)
+        {
+            transform.parent.GetComponent<SpawnPoint>().humans.Remove(this.gameObject);
+            Destroy(this.gameObject);
+        }
+        else{
+            this.health = this.health - damage;
         }
     }
 }

@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
     {
         if (draggingObject != null && currentContainer != null)
         {
-            Instantiate(draggingObject.GetComponent<ObjectDragging>().card.object_Game, currentContainer.transform);
+            GameObject objectGame = Instantiate(draggingObject.GetComponent<ObjectDragging>().card.object_Game, currentContainer.transform);
+            objectGame.GetComponent<AnimalController>().humans = currentContainer.GetComponent<ObjectContainer>().spawnPoint.humans;
             currentContainer.GetComponent<ObjectContainer>().isfull = true;
         }
     }
