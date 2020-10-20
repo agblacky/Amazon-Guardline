@@ -118,5 +118,5 @@ MonoBehaviour:
   humans: []
   toAttack: {fileID: 0}
   attackCooldown: 4
-  damageValue: 0
+  damageValue: 100
   isAttacking: 0

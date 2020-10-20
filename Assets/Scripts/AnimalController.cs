@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AnimalController : MonoBehaviour
@@ -10,17 +11,11 @@ public class AnimalController : MonoBehaviour
     public float attackCooldown;
     private float attackTime;
     public int damageValue;
-    public bool isAttacking;
     private void Update()
     {
-        if (humans.Count > 0 && isAttacking == false)
+        if (humans.Count > 0)
         {
-            isAttacking = true;
-            //toAttack=GetComponent<SpawnPoint>().humans
-        }
-        else if (humans.Count == 0 && isAttacking == true)
-        {
-            isAttacking = false; 
+            toAttack = humans.First();
         }
         if (toAttack != null)
         {
