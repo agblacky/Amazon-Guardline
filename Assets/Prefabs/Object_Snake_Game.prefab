@@ -114,3 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535a77298940a6746b59a1e498074fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  humans: []
+  toAttack: {fileID: 0}
+  attackCooldown: 5
+  damageValue: 0

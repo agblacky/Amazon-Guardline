@@ -19,7 +19,12 @@ public class AnimalController : MonoBehaviour
         }
         if (toAttack != null)
         {
-            if (attackTime <= Time.time)
+            if (attackCooldown == 0)
+            {
+                toAttack.GetComponent<HumanController>().ReceiveDamage(damageValue);
+                //Gameobject has to be destroyed after killing the first enemy in list
+            }
+            else if (attackTime <= Time.time)
             {
                 GameObject bulletInstance = Instantiate(bullet, transform);
                 bulletInstance.GetComponent<Bullet>().damageValue = this.damageValue;
