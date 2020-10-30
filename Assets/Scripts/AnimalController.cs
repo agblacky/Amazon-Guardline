@@ -11,6 +11,10 @@ public class AnimalController : MonoBehaviour
     public float attackCooldown;
     private float attackTime;
     public int damageValue;
+    public bool isClassic;
+    public bool isWall;
+    public bool isDestroy;
+    public bool isActiveDamage;
     private void Update()
     {
         if (humans.Count > 0)
@@ -19,17 +23,30 @@ public class AnimalController : MonoBehaviour
         }
         if (toAttack != null)
         {
-            if (attackCooldown == 0)
+            //Temp Code
+            if (isClassic)
+            {
+                if (attackTime <= Time.time)
+                {
+                    GameObject bulletInstance = Instantiate(bullet, transform);
+                    bulletInstance.GetComponent<Bullet>().damageValue = this.damageValue;
+                    attackTime = Time.time + attackCooldown;
+                }
+            }
+            else if (isDestroy)
             {
                 toAttack.GetComponent<HumanController>().ReceiveDamage(damageValue);
                 //Gameobject has to be destroyed after killing the first enemy in list
             }
-            else if (attackTime <= Time.time)
+            else if (isWall)
             {
-                GameObject bulletInstance = Instantiate(bullet, transform);
-                bulletInstance.GetComponent<Bullet>().damageValue = this.damageValue;
-                attackTime = Time.time + attackCooldown;
+                //Wall Code
             }
+            else if (isActiveDamage)
+            {
+                //Spikes Code
+            }
+
         }
     }
 }

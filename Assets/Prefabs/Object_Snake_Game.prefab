@@ -117,5 +117,9 @@ MonoBehaviour:
   bullet: {fileID: 0}
   humans: []
   toAttack: {fileID: 0}
-  attackCooldown: 5
-  damageValue: 0
+  attackCooldown: 2
+  damageValue: 25
+  isClassic: 1
+  isWall: 0
+  isDestroy: 0
+  isActiveDamage: 0

@@ -119,4 +119,6 @@ MonoBehaviour:
   toAttack: {fileID: 0}
   attackCooldown: 4
   damageValue: 100
-  isAttacking: 0
+  isClassic: 1
+  isWall: 0
+  isDestroy: 0
