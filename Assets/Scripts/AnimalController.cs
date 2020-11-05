@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
 
@@ -14,7 +14,6 @@ public class AnimalController : MonoBehaviour
     public bool isClassic;
     public bool isWall;
     public bool isDestroy;
-    public bool isActiveDamage;
     private void Update()
     {
         if (humans.Count > 0)
@@ -23,28 +22,32 @@ public class AnimalController : MonoBehaviour
         }
         if (toAttack != null)
         {
-            //Temp Code
             if (isClassic)
             {
                 if (attackTime <= Time.time)
                 {
+                    //Create Bullet
                     GameObject bulletInstance = Instantiate(bullet, transform);
+                    //Inherit damage
                     bulletInstance.GetComponent<Bullet>().damageValue = this.damageValue;
+                    //Cooldown
                     attackTime = Time.time + attackCooldown;
                 }
             }
             else if (isDestroy)
             {
-                toAttack.GetComponent<HumanController>().ReceiveDamage(damageValue);
-                //Gameobject has to be destroyed after killing the first enemy in list
+                if (transform.position.x >= toAttack.transform.position.x - 400)
+                {
+                    toAttack.GetComponent<HumanController>().ReceiveDamage(damageValue);
+                    //After attacking, gameobject is beeing destroyed
+                    Destroy(this.gameObject);
+                    //Empty parent container
+                    gameObject.transform.parent.GetComponent<ObjectContainer>().isfull = false;
+                }
             }
             else if (isWall)
             {
                 //Wall Code
-            }
-            else if (isActiveDamage)
-            {
-                //Spikes Code
             }
 
         }

@@ -10,6 +10,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     public Canvas canvas;
     private GameObject objectDragInstance;
     public GameManager gamemanager;
+
     private void Start()
     {
         gamemanager = GameManager.instance;
