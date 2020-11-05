@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6041687817932873391
+--- !u!1 &3395504569961223373
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1685223633292052278}
-  - component: {fileID: 8942832653564242597}
-  - component: {fileID: 1101711472683298066}
-  - component: {fileID: 6665830517849595489}
-  - component: {fileID: 798272591457496273}
+  - component: {fileID: 7756394358144224596}
+  - component: {fileID: 62048255349186759}
+  - component: {fileID: 8326367200716924784}
+  - component: {fileID: 2325805656949560323}
+  - component: {fileID: 8634292003534907059}
   m_Layer: 10
-  m_Name: Object_Chameleon_Game
+  m_Name: Object_Frogs_Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1685223633292052278
+--- !u!224 &7756394358144224596
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041687817932873391}
+  m_GameObject: {fileID: 3395504569961223373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 20}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8942832653564242597
+--- !u!222 &62048255349186759
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041687817932873391}
+  m_GameObject: {fileID: 3395504569961223373}
   m_CullTransparentMesh: 0
---- !u!114 &1101711472683298066
+--- !u!114 &8326367200716924784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041687817932873391}
+  m_GameObject: {fileID: 3395504569961223373}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 889a1e3a0bfd6be4fbcf2fa84a2f03a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85d16693bb9372a45998a99a6a2437dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,20 +76,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!61 &6665830517849595489
+--- !u!61 &2325805656949560323
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041687817932873391}
+  m_GameObject: {fileID: 3395504569961223373}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -100,15 +100,15 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 64}
+  m_Size: {x: 64, y: 64}
   m_EdgeRadius: 0
---- !u!114 &798272591457496273
+--- !u!114 &8634292003534907059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041687817932873391}
+  m_GameObject: {fileID: 3395504569961223373}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 535a77298940a6746b59a1e498074fb0, type: 3}
@@ -118,8 +118,8 @@ MonoBehaviour:
   humans: []
   toAttack: {fileID: 0}
   attackCooldown: 0
-  damageValue: 1000
+  damageValue: 10
   isClassic: 0
   isWall: 0
-  isDestroy: 1
-  isActiveDamage: 0
+  isDestroy: 0
+  isActiveDamage: 1
