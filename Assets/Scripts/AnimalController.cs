@@ -50,6 +50,8 @@ public class AnimalController : MonoBehaviour
                 //Wall Code
             }
 
+
         }
+        
     }
 }
