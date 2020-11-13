@@ -14,6 +14,7 @@ public class AnimalController : MonoBehaviour
     public bool isClassic;
     public bool isWall;
     public bool isDestroy;
+    public bool isPlant;
     private void Update()
     {
         if (humans.Count > 0)
@@ -44,10 +45,6 @@ public class AnimalController : MonoBehaviour
                     //Empty parent container
                     gameObject.transform.parent.GetComponent<ObjectContainer>().isfull = false;
                 }
-            }
-            else if (isWall)
-            {
-                //Wall Code
             }
 
 
