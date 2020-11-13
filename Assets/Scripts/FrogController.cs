@@ -9,7 +9,7 @@ public class FrogController : MonoBehaviour
     private float attackTime;
     public int damageValue;
     private bool isAttacking;
-    private List<Collider2D> collisions;
+    List<Collider2D> collisions = new List<Collider2D>();
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,13 +17,17 @@ public class FrogController : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             this.collisions.Add(collision);
-            isAttacking = true; //fa´lss das nicht geht, in eine Liste setzen, welche angegriffen werden
+            isAttacking = true;
         }
             
     }
 
     private void Update()
     {
+        if (collisions.Count == 0)
+        {
+            isAttacking = false;
+        }
         if (isAttacking)
         {
 
@@ -43,7 +47,6 @@ public class FrogController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         collisions.Remove(collision);
-        isAttacking = false;
     }
 
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3395504569961223373
+--- !u!1 &5651258819149542027
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,28 +8,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7756394358144224596}
-  - component: {fileID: 62048255349186759}
-  - component: {fileID: 8326367200716924784}
-  - component: {fileID: 2325805656949560323}
-  - component: {fileID: 5307995097220842180}
-  m_Layer: 13
-  m_Name: Object_Frogs_Game
+  - component: {fileID: 7054719055692147871}
+  - component: {fileID: 7829156790795846305}
+  - component: {fileID: 4908278488120552133}
+  - component: {fileID: 8118362031254804696}
+  - component: {fileID: 8448591783790614700}
+  - component: {fileID: 2181861282197651948}
+  m_Layer: 8
+  m_Name: Object_Coffeeplant_Drag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7756394358144224596
+--- !u!224 &7054719055692147871
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3395504569961223373}
+  m_GameObject: {fileID: 5651258819149542027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,21 +40,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &62048255349186759
+--- !u!222 &7829156790795846305
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3395504569961223373}
+  m_GameObject: {fileID: 5651258819149542027}
   m_CullTransparentMesh: 0
---- !u!114 &8326367200716924784
+--- !u!114 &4908278488120552133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3395504569961223373}
+  m_GameObject: {fileID: 5651258819149542027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85d16693bb9372a45998a99a6a2437dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c838a3c04a7d1d9429df4119c48e0652, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,13 +77,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!61 &2325805656949560323
+--- !u!61 &8118362031254804696
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3395504569961223373}
+  m_GameObject: {fileID: 5651258819149542027}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -100,19 +101,39 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 64, y: 64}
+  m_Size: {x: 32, y: 32}
   m_EdgeRadius: 0
---- !u!114 &5307995097220842180
+--- !u!50 &8448591783790614700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651258819149542027}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2181861282197651948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3395504569961223373}
+  m_GameObject: {fileID: 5651258819149542027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3fb96bc32709942ba0fa41df61c765, type: 3}
+  m_Script: {fileID: 11500000, guid: d336201a0ef0afb4ca43de9d4a49ef9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 4
-  damageValue: 100
+  card: {fileID: 0}
