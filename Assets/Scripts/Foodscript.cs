@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 
 public class Foodscript : MonoBehaviour
 {
+    
     public void OnPointerClick(PointerEventData eventData)
     {
-        Transform.FindSceneObjectsOfType(Text)
+        
     }
 }

@@ -12,9 +12,7 @@ public class AnimalController : MonoBehaviour
     private float attackTime;
     public int damageValue;
     public bool isClassic;
-    public bool isWall;
     public bool isDestroy;
-    public bool isPlant;
     private void Update()
     {
         if (humans.Count > 0)

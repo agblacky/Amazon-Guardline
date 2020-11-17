@@ -3,7 +3,11 @@ guid: 08984cb1bed4f8e48a9406607beffac6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - draggingObject: {instanceID: 0}
+  - currentContainer: {instanceID: 0}
+  - counterPrefab: {fileID: 7440777206772167510, guid: fa09278fd8dad6d4cafb667a4904bba4,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
