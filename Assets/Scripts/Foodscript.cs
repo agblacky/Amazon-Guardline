@@ -7,11 +7,12 @@ using UnityEngine.UI;
 
 public class Foodscript : MonoBehaviour
 {
-    public Text text;
+    private Text text;
     private void Start()
     {
+        //Get text from all GameObjects
         text = GameObject.Find("FoodcounterText").GetComponent<Text>();
-        Instantiate(text, transform);
+        //Add button event listener
         Button btn = gameObject.GetComponent<Button>();
         btn.onClick.AddListener(Add);
     }
