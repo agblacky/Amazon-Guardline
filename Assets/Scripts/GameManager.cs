@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         
     }
-    public void PlaceObject()
+    public bool PlaceObject()
     {
         if (draggingObject != null && currentContainer != null)
         {
@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
                 objectGame.GetComponent<AnimalController>().humans = currentContainer.GetComponent<ObjectContainer>().spawnPoint.humans;
             }
             currentContainer.GetComponent<ObjectContainer>().isfull = true;
+            return true;
         }
+        return false;
     }
 }

@@ -1449,6 +1449,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092579834}
+    - target: {fileID: 886194216568140091, guid: 67d4310e7cfe44a4997704651242cefc,
+        type: 3}
+      propertyPath: cost
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7477054907796632552, guid: 67d4310e7cfe44a4997704651242cefc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4576,6 +4581,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092579834}
+    - target: {fileID: 886194216568140091, guid: 67d4310e7cfe44a4997704651242cefc,
+        type: 3}
+      propertyPath: cost
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7477054907796632552, guid: 67d4310e7cfe44a4997704651242cefc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4724,6 +4734,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092579834}
+    - target: {fileID: 886194216568140091, guid: 67d4310e7cfe44a4997704651242cefc,
+        type: 3}
+      propertyPath: cost
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7477054907796632552, guid: 67d4310e7cfe44a4997704651242cefc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6276,6 +6291,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092579834}
+    - target: {fileID: 886194216568140091, guid: 67d4310e7cfe44a4997704651242cefc,
+        type: 3}
+      propertyPath: cost
+      value: 175
+      objectReference: {fileID: 0}
     - target: {fileID: 7477054907796632552, guid: 67d4310e7cfe44a4997704651242cefc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7118,6 +7138,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092579834}
+    - target: {fileID: 886194216568140091, guid: 67d4310e7cfe44a4997704651242cefc,
+        type: 3}
+      propertyPath: cost
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 7477054907796632552, guid: 67d4310e7cfe44a4997704651242cefc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8451,6 +8476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfcdb515be92b6a45b8934c6f12150b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!224 &2097776757 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8900125506972893718, guid: 4316a9d8b82742b49ae3d8f84609d2e3,
@@ -8487,6 +8513,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092579834}
+    - target: {fileID: 886194216568140091, guid: 67d4310e7cfe44a4997704651242cefc,
+        type: 3}
+      propertyPath: cost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7477054907796632552, guid: 67d4310e7cfe44a4997704651242cefc,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -19,7 +19,7 @@ public class Foodscript : MonoBehaviour
 
     public void Add()
     {
-        text.text = Convert.ToString(Convert.ToInt16(text.text) + 50);
+        text.GetComponent<Shop>().Add();
         Destroy(this.gameObject);
     }
     
