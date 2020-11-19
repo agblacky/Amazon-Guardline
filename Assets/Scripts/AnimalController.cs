@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AnimalController : MonoBehaviour
 {
+    private int health = 700;
     public GameObject bullet;
     public List<GameObject> humans;
     public GameObject toAttack;
@@ -48,5 +49,16 @@ public class AnimalController : MonoBehaviour
 
         }
         
+    }
+    public void ReceiveDamage(int damage)
+    {
+        if (this.health - damage <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            this.health -= damage;
+        }
     }
 }

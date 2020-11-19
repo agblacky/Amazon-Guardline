@@ -10,7 +10,6 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         text = this.gameObject.GetComponentInChildren<Text>();
-        text.text = "50";
     }
     public void Add()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlantController : MonoBehaviour
 {
+    private int health = 700;
     public GameObject food;
     public float attackCooldown;
     private float attackTime;
@@ -14,6 +15,17 @@ public class PlantController : MonoBehaviour
             Instantiate(food,transform);
             //Cooldown
             attackTime = Time.time + attackCooldown;
+        }
+    }
+    public void ReceiveDamage(int damage)
+    {
+        if (this.health - damage <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            this.health -= damage;
         }
     }
 

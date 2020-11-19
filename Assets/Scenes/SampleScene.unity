@@ -765,25 +765,17 @@ MonoBehaviour:
   - {fileID: 7563780291209274112, guid: 3c3169301ceee2d48a58800fb73794be, type: 3}
   - {fileID: 8849581281265709322, guid: f053dded077105349b83f12b0429c9f3, type: 3}
   humans:
-  - spawnTime: 1
+  - spawnTime: 0
     humanType: 0
-    spawner: 0
-    randomSpawner: 1
     isSpawned: 0
-  - spawnTime: 3
-    humanType: 1
-    spawner: 0
-    randomSpawner: 1
-    isSpawned: 0
-  - spawnTime: 5
+  - spawnTime: 0
     humanType: 2
-    spawner: 0
-    randomSpawner: 1
     isSpawned: 0
-  - spawnTime: 7
+  - spawnTime: 0
     humanType: 3
-    spawner: 0
-    randomSpawner: 1
+    isSpawned: 0
+  - spawnTime: 0
+    humanType: 0
     isSpawned: 0
 --- !u!1 &191052452
 GameObject:
@@ -8469,7 +8461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 50
 --- !u!222 &2096919119
 CanvasRenderer:
   m_ObjectHideFlags: 0

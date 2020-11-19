@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Human : MonoBehaviour
+public class Human
 {
     public int spawnTime;
     public HumanType humanType;

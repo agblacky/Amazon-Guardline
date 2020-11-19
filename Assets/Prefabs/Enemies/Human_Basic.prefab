@@ -127,7 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 500
   damage: 100
-  movementSpeed: 0.1
 --- !u!50 &2141566362420530858
 Rigidbody2D:
   serializedVersion: 4

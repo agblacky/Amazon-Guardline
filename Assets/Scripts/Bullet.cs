@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == 11)
         {
+            //Call Human damage function when colliding
             collision.gameObject.GetComponent<HumanController>().ReceiveDamage(damageValue);
             Destroy(this.gameObject);
         }
