@@ -6,6 +6,7 @@ public class HumanSpawner : MonoBehaviour
 {
     public List<GameObject> prefabs;
     public List<Human> humans;
+    private int spawner;
 
     private void Update()
     {
@@ -13,8 +14,9 @@ public class HumanSpawner : MonoBehaviour
         {
             if (human.isSpawned == false && human.spawnTime < Time.time)
             {
-                GameObject humanInstance = Instantiate(prefabs[(int)human.humanType],transform.GetChild(human.spawner).transform);
-                transform.GetChild(human.spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
+                spawner = Random.Range(1, 6);
+                GameObject humanInstance = Instantiate(prefabs[(int)human.humanType],transform.GetChild(spawner).transform);
+                transform.GetChild(spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
                 human.isSpawned = true; 
             }
         }
