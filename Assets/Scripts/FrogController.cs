@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class FrogController : MonoBehaviour
 {
-    public float attackCooldown;
-    private float attackTime;
     public int damageValue;
     private bool isAttacking;
     List<Collider2D> collisions = new List<Collider2D>();
@@ -16,6 +14,7 @@ public class FrogController : MonoBehaviour
     {
         if (collision.gameObject.layer == 11)
         {
+            //Add enemies to attacklist on collision
             this.collisions.Add(collision);
             isAttacking = true;
         }
@@ -30,22 +29,22 @@ public class FrogController : MonoBehaviour
         }
         if (isAttacking)
         {
-
-            if (attackTime <= Time.time)
+            if (!(gameObject.GetComponent<CoolDown>().isCooldown))
             {
-                foreach(Collider2D collision in collisions)
+                //Damage all enemies in list
+                foreach (Collider2D collision in collisions)
                 {
                     collision.gameObject.GetComponent<HumanController>().ReceiveDamage(damageValue);
-                    
                 }
                 //Cooldown
-                attackTime = Time.time + attackCooldown;
+                gameObject.GetComponent<CoolDown>().setCoolDown();
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //Remove exiting objects from attacklist
         collisions.Remove(collision);
     }
 

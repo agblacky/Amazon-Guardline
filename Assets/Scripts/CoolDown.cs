@@ -11,10 +11,15 @@ public class CoolDown : MonoBehaviour
     private float counter;
     private void Start()
     {
-        if (image)
+        try
         {
             image.fillAmount = 0;
         }
+        catch (System.Exception)
+        {
+
+        }
+
         
     }
 
@@ -22,7 +27,7 @@ public class CoolDown : MonoBehaviour
     {
         if (isCooldown)
         {
-            if (image)
+            try
             {
                 image.fillAmount -= 1 / coolDown * Time.deltaTime;
 
@@ -32,13 +37,14 @@ public class CoolDown : MonoBehaviour
                     isCooldown = false;
                 }
             }
-            else
+            catch (System.Exception)
             {
-                counter -= 1 / coolDown * Time.deltaTime;
-                if (counter <= 0)
-                {
-                    isCooldown = false;
-                }
+
+            }
+            counter -= 1 / coolDown * Time.deltaTime;
+            if (counter <= 0)
+            {
+                isCooldown = false;
             }
 
         }
@@ -47,10 +53,15 @@ public class CoolDown : MonoBehaviour
     {
         isCooldown = true;
         counter = 1;
-        if (image)
+        try
         {
             image.fillAmount = counter;
         }
+        catch (System.Exception)
+        {
+
+        }
+
             
     }
 }

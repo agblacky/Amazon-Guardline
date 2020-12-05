@@ -115,10 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535a77298940a6746b59a1e498074fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 500
   bullet: {fileID: 2852853383255529448, guid: 6c616a776214ce54a8a95bc655d4c275, type: 3}
   humans: []
   toAttack: {fileID: 0}
-  attackCooldown: 4
   damageValue: 100
   isClassic: 1
   isDestroy: 0

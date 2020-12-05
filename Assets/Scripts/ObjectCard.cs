@@ -59,6 +59,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
                     gameObject.GetComponent<CoolDown>().setCoolDown();
                 }
             }
+            
 
             gamemanager.draggingObject = null;
             Destroy(objectDragInstance);

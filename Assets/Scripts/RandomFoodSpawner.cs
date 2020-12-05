@@ -11,12 +11,9 @@ public class RandomFoodSpawner : MonoBehaviour
     {
         if (!(gameObject.GetComponent<CoolDown>().isCooldown))
         {
-            //Debug.Log("Width:" + Screen.width + "; Height: " + Screen.height);
             //Shuffle Position
             screenX = Mathf.CeilToInt(Random.Range(Screen.width/-3, Screen.width / 3));
             screenY = Mathf.CeilToInt(Random.Range(-1*Screen.height / 4, (Screen.height * 2) / 4));
-            Debug.Log("Width:" + screenX + "; Height: " + screenY);
-
 
             //Instantiate Object
             var clone = Instantiate(food, new Vector2(0,0), food.transform.rotation);

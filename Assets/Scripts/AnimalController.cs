@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AnimalController : MonoBehaviour
 {
-    private int health = 700;
+    public int health;
     public GameObject bullet;
     public List<GameObject> humans;
     public GameObject toAttack;
