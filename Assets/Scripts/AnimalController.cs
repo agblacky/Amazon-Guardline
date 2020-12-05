@@ -9,8 +9,6 @@ public class AnimalController : MonoBehaviour
     public GameObject bullet;
     public List<GameObject> humans;
     public GameObject toAttack;
-    public float attackCooldown;
-    private float attackTime;
     public int damageValue;
     public bool isClassic;
     public bool isDestroy;
@@ -24,14 +22,14 @@ public class AnimalController : MonoBehaviour
         {
             if (isClassic)
             {
-                if (attackTime <= Time.time)
+                if (!(gameObject.GetComponent<CoolDown>().isCooldown))
                 {
                     //Create Bullet
                     GameObject bulletInstance = Instantiate(bullet, transform);
                     //Inherit damage
                     bulletInstance.GetComponent<Bullet>().damageValue = this.damageValue;
                     //Cooldown
-                    attackTime = Time.time + attackCooldown;
+                    gameObject.GetComponent<CoolDown>().setCoolDown();
                 }
             }
             else if (isDestroy)
@@ -54,10 +52,12 @@ public class AnimalController : MonoBehaviour
     {
         if (this.health - damage <= 0)
         {
+            //Destroy Gameobject if smaller or equal than zero
             Destroy(this.gameObject);
         }
         else
         {
+            //Receive damage if not below zero
             this.health -= damage;
         }
     }

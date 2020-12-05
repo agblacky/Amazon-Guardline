@@ -6,14 +6,14 @@ public class HumanController : MonoBehaviour
 {
     public int health;
     public int damage;
-    private float movementSpeed=0.065f;
+    private float movementSpeed=-10;
     private bool isColliding;
     private float damageCooldown=1.0f;
     private void Update()
     {
         if (!isColliding)
         {
-            transform.Translate(new Vector3(movementSpeed * -1, 0, 0));
+            transform.position = transform.position + new Vector3(movementSpeed * Time.deltaTime, 0, 0);
         }
         
     }
@@ -23,6 +23,10 @@ public class HumanController : MonoBehaviour
         {
             StartCoroutine(Attack(collision));
             isColliding = true;
+        }
+        else if (collision.gameObject.layer == 13)
+        {
+            //LastWall
         }
     }
     IEnumerator Attack(Collider2D collision)

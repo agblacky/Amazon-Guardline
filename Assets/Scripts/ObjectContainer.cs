@@ -13,10 +13,12 @@ public class ObjectContainer : MonoBehaviour
     {
         gamemanager = GameManager.instance;
     }
+    //Visualize current container which you hover on with a character in hand
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (gamemanager.draggingObject != null && isfull == false)
         {
+            
             gamemanager.currentContainer = this.gameObject;
             backgroundimage.enabled = true;
         }

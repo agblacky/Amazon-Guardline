@@ -8,8 +8,8 @@ public class Bullet : MonoBehaviour
     public int damageValue;
     private void Update()
     {
-        //Give Bullet Movement Speed 
-        transform.Translate(new Vector3(movementSpeed, 0, 0));
+        //Give Bullet Movement Speed
+        transform.position = transform.position + new Vector3(movementSpeed * Time.deltaTime, 0, 0);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

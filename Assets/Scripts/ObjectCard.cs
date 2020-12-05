@@ -17,12 +17,14 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     private void Start()
     {
         gamemanager = GameManager.instance;
+        //Get Shop
         text = GameObject.Find("FoodcounterText").GetComponent<Text>();
     }
     public void OnDrag(PointerEventData eventData)
     {
-        if (!(gameObject.GetComponent<CardCooldown>().isCooldown))
+        if (!(gameObject.GetComponent<CoolDown>().isCooldown))
         {
+            //Object follows curser on drag
             objectDragInstance.transform.position = Input.mousePosition;
         }
         
@@ -30,8 +32,9 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!((gameObject.GetComponent<CardCooldown>().isCooldown)))
+        if (!((gameObject.GetComponent<CoolDown>().isCooldown)))
         {
+            //Create instance of gameobject on click
             objectDragInstance = Instantiate(object_Drag, canvas.transform);
             objectDragInstance.transform.position = Input.mousePosition;
             objectDragInstance.GetComponent<ObjectDragging>().card = this;
@@ -43,14 +46,17 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!((gameObject.GetComponent<CardCooldown>().isCooldown)))
+        //If cooldown
+        if (!((gameObject.GetComponent<CoolDown>().isCooldown)))
         {
             if (text.GetComponent<Shop>().checkCurrency(this.cost))
             {
                 if (gamemanager.PlaceObject())
                 {
+                    //Substract cardcost from shop
                     text.GetComponent<Shop>().Remove(this.cost);
-                    gameObject.GetComponent<CardCooldown>().setCoolDown();
+                    //Set Cardcooldown
+                    gameObject.GetComponent<CoolDown>().setCoolDown();
                 }
             }
 

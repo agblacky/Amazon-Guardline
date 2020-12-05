@@ -13,7 +13,7 @@ public class Shop : MonoBehaviour
     }
     public void Add()
     {
-        text.text = Convert.ToString(Convert.ToInt16(text.text) + 50);
+        text.text = Convert.ToString(Convert.ToInt16(text.text) + 25);
     }
     public void Remove(int cost)
     {

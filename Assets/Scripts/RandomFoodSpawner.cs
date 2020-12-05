@@ -5,28 +5,24 @@ using UnityEngine;
 public class RandomFoodSpawner : MonoBehaviour
 {
     public GameObject food;
-    private int time;
-    private float spawnTime;
     private float screenX;
     private float screenY;
-    private Vector2 pos;
     void Update()
     {
-        
-        if (spawnTime <= Time.time)
+        if (!(gameObject.GetComponent<CoolDown>().isCooldown))
         {
-            time = Mathf.CeilToInt(Random.Range(15.0f, 30.0f));
-            spawnTime = Time.time + time;
-
+            //Debug.Log("Width:" + Screen.width + "; Height: " + Screen.height);
             //Shuffle Position
-            screenX = Random.Range(126.0f, 1340.0f);
-            screenY = Random.Range(56.0f, 590.0f);
+            screenX = Mathf.CeilToInt(Random.Range(Screen.width/-3, Screen.width / 3));
+            screenY = Mathf.CeilToInt(Random.Range(-1*Screen.height / 4, (Screen.height * 2) / 4));
+            Debug.Log("Width:" + screenX + "; Height: " + screenY);
 
-            pos = new Vector2(screenX, screenY);
 
             //Instantiate Object
-            var clone = Instantiate(food, pos, food.transform.rotation);
+            var clone = Instantiate(food, new Vector2(0,0), food.transform.rotation);
             clone.transform.SetParent(GameObject.Find("Canvas").transform);
+            clone.transform.localPosition = new Vector2(screenX, screenY);
+            gameObject.GetComponent<CoolDown>().setCoolDown();
         }
     }
 }

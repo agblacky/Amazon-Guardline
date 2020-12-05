@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2486619341780407118}
   - component: {fileID: 2870617442068367166}
   - component: {fileID: -4894673080861719656}
+  - component: {fileID: 6495639178535207869}
   m_Layer: 10
   m_Name: Object_Snake_Game
   m_TagString: Untagged
@@ -121,3 +122,17 @@ MonoBehaviour:
   damageValue: 100
   isClassic: 1
   isDestroy: 0
+--- !u!114 &6495639178535207869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9083844758473597171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4e62e22060e1f4cafe88798836b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDown: 2
+  image: {fileID: 0}
