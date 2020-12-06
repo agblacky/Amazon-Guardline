@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
@@ -20,5 +21,11 @@ public class UIButtons : MonoBehaviour
     void ReturnToMainMenu()
     {
         canvas.GetComponent<IngameUI>().ReturnToMainMenu();
+    }
+    public void LoadScene()
+    {
+        SceneManager.LoadScene("Game");
+        //Quit current scene
+        Application.Quit();
     }
 }

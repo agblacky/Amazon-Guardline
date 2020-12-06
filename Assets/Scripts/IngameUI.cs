@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class IngameUI : MonoBehaviour
 {
@@ -40,10 +41,25 @@ public class IngameUI : MonoBehaviour
     }
     public void RestartGame()
     {
-        //Restart
+        //Start New Scene
+        LoadScene("Game");
+
     }
     public void ReturnToMainMenu()
     {
-        //Close Scene Open Scene
+        //Start New Scene
+        LoadScene("MainMenu");
+    }
+    void KillScene()
+    {
+        Application.Quit();
+    }
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+        //Quit current scene
+        KillScene();
+        //Resume Game
+        ResumeGame();
     }
 }
