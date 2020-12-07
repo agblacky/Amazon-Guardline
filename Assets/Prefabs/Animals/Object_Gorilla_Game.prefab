@@ -122,6 +122,7 @@ MonoBehaviour:
   damageValue: 100
   isClassic: 1
   isDestroy: 0
+  coolDown: 4
 --- !u!114 &8954470538672223157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,5 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4e62e22060e1f4cafe88798836b916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: 4
   image: {fileID: 0}

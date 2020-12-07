@@ -13,6 +13,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     public GameManager gamemanager;
     public int cost;
     private Text text;
+    public float coolDown;
 
     private void Start()
     {
@@ -56,7 +57,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
                     //Substract cardcost from shop
                     text.GetComponent<Shop>().Remove(this.cost);
                     //Set Cardcooldown
-                    gameObject.GetComponent<CoolDown>().setCoolDown();
+                    gameObject.GetComponent<CoolDown>().setCoolDown(this.coolDown);
                 }
             }
             

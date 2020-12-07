@@ -6,7 +6,7 @@ public class HumanController : MonoBehaviour
 {
     public int health;
     public int damage;
-    private float movementSpeed=-50; //-15
+    private float movementSpeed = -50; //-15
     private bool isColliding;
     private float damageCooldown=1.0f;
     private void Update()

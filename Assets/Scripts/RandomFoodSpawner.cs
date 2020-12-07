@@ -8,6 +8,7 @@ public class RandomFoodSpawner : MonoBehaviour
     private float screenX;
     private float screenY;
     GameObject canvas;
+    public float coolDown;
     private void Start()
     {
         canvas = GameObject.Find("Canvas");
@@ -24,7 +25,7 @@ public class RandomFoodSpawner : MonoBehaviour
             var clone = Instantiate(food, new Vector2(0,0), food.transform.rotation);
             clone.transform.SetParent(canvas.transform);
             clone.transform.localPosition = new Vector2(screenX, screenY);
-            gameObject.GetComponent<CoolDown>().setCoolDown();
+            gameObject.GetComponent<CoolDown>().setCoolDown(this.coolDown);
         }
     }
 }

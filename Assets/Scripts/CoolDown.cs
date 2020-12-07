@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CoolDown : MonoBehaviour
 {
     public bool isCooldown { get; set; }
-    public float coolDown;
+    private float coolDown;
     public Image image;
     private float counter;
     private void Start()
@@ -49,8 +49,9 @@ public class CoolDown : MonoBehaviour
 
         }
     }
-    public void setCoolDown()
+    public void setCoolDown(float time)
     {
+        this.coolDown = time;
         isCooldown = true;
         counter = 1;
         try

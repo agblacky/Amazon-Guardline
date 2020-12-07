@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class Human
 {
-    public int spawnTime;
     public HumanType humanType;
     public bool isSpawned;
 }

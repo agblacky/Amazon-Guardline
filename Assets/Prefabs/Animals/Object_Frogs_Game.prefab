@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3fb96bc32709942ba0fa41df61c765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 4
+  coolDown: 1
   damageValue: 100
 --- !u!114 &7333431819076025431
 MonoBehaviour:
@@ -129,5 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4e62e22060e1f4cafe88798836b916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: 4
   image: {fileID: 0}

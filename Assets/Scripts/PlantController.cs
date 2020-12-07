@@ -6,6 +6,7 @@ public class PlantController : MonoBehaviour
 {
     private int health = 700;
     public GameObject food;
+    public float coolDown;
     private void Update()
     {
         if (!(gameObject.GetComponent<CoolDown>().isCooldown))
@@ -14,7 +15,7 @@ public class PlantController : MonoBehaviour
             var clone = Instantiate(food, gameObject.transform.position, food.transform.rotation);
             clone.transform.SetParent(gameObject.transform);
             //Cooldown
-            gameObject.GetComponent<CoolDown>().setCoolDown();
+            gameObject.GetComponent<CoolDown>().setCoolDown(this.coolDown);
         }
     }
     public void ReceiveDamage(int damage)

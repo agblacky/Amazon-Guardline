@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   food: {fileID: 902413939705277038, guid: 4ac36d22cebeacd4680a3b22ab63ef4b, type: 3}
+  coolDown: 20
 --- !u!114 &-7054495502186345660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,5 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4e62e22060e1f4cafe88798836b916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: 20
   image: {fileID: 0}

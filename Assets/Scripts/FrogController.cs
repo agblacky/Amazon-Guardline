@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FrogController : MonoBehaviour
 {
+    public float coolDown;
     public int damageValue;
     private bool isAttacking;
     List<Collider2D> collisions = new List<Collider2D>();
@@ -37,7 +38,7 @@ public class FrogController : MonoBehaviour
                     collision.gameObject.GetComponent<HumanController>().ReceiveDamage(damageValue);
                 }
                 //Cooldown
-                gameObject.GetComponent<CoolDown>().setCoolDown();
+                gameObject.GetComponent<CoolDown>().setCoolDown(this.coolDown);
             }
         }
     }

@@ -12,6 +12,7 @@ public class AnimalController : MonoBehaviour
     public int damageValue;
     public bool isClassic;
     public bool isDestroy;
+    public float coolDown;
     private void Update()
     {
         if (humans.Count > 0)
@@ -29,7 +30,7 @@ public class AnimalController : MonoBehaviour
                     //Inherit damage
                     bulletInstance.GetComponent<Bullet>().damageValue = this.damageValue;
                     //Cooldown
-                    gameObject.GetComponent<CoolDown>().setCoolDown();
+                    gameObject.GetComponent<CoolDown>().setCoolDown(this.coolDown);
                 }
             }
             else if (isDestroy)
