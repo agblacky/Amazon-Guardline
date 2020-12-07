@@ -7,7 +7,7 @@ public class HumanSpawner : MonoBehaviour
     public List<GameObject> prefabs;
     public List<Human> humans;
     private int spawner;
-    private int counter;
+    public int counter;
     private void Start()
     {
         for (int i = 0; i < humans.Count; ++i)
@@ -22,19 +22,25 @@ public class HumanSpawner : MonoBehaviour
         {
             if (!(gameObject.GetComponent<CoolDown>().isCooldown))
             {
-                Human human = humans[counter];
-                if (human.isSpawned == false)
+                try
                 {
-                    spawner = Random.Range(0, 5);
-                    GameObject humanInstance = Instantiate(prefabs[(int)human.humanType], transform.GetChild(spawner).transform);
-                    transform.GetChild(spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
-                    human.isSpawned = true;
-                    gameObject.GetComponent<CoolDown>().setCoolDown(Random.Range(3, 10));
-                    counter++;
+                    Human human = humans[counter];
+                    if (human.isSpawned == false)
+                    {
+                        spawner = Random.Range(0, 5);
+                        GameObject humanInstance = Instantiate(prefabs[(int)human.humanType], transform.GetChild(spawner).transform);
+                        transform.GetChild(spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
+                        human.isSpawned = true;
+                        gameObject.GetComponent<CoolDown>().setCoolDown(Random.Range(3, 10));
+                        counter++;
+                    }
                 }
+                catch (System.Exception)
+                {
+                }
+                
             }
         }
-        
     }
     private HumanType GetRandomHumanType()
     {

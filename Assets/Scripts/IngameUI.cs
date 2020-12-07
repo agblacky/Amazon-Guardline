@@ -7,13 +7,35 @@ using UnityEngine.SceneManagement;
 public class IngameUI : MonoBehaviour
 {
     public GameObject UIPrefab;
+    public GameObject UIWin;
     public KeyCode key;
     private GameObject uiInstance;
+    private GameObject spawnercontainer;
+    public GameObject spawner1;
+    public GameObject spawner2;
+    public GameObject spawner3;
+    public GameObject spawner4;
+    public GameObject spawner5;
+    private bool gameWon;
+    private void Start()
+    {
+        spawnercontainer = GameObject.Find("Spawner");
+
+    }
     private void Update()
     {
         if (Input.GetKeyDown(key))
         {
             CheckUI();
+        }
+        if (spawnercontainer.GetComponent<HumanSpawner>().counter == spawnercontainer.GetComponent<HumanSpawner>().humans.Count && spawner1.GetComponent<SpawnPoint>().humans.Count==0&& spawner2.GetComponent<SpawnPoint>().humans.Count == 0 && spawner3.GetComponent<SpawnPoint>().humans.Count == 0 && spawner4.GetComponent<SpawnPoint>().humans.Count == 0 && spawner5.GetComponent<SpawnPoint>().humans.Count == 0)
+        {
+            if (!(gameWon))
+            {
+                PauseGame();
+                Instantiate(UIWin, transform);
+                gameWon = true;
+            }
         }
 
     }
