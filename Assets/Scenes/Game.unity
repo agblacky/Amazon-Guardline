@@ -9916,7 +9916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc33d81a5293db46935a807731914aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 3638069769139003472, guid: fd6e250db0a51014e9e3d27a94efd3a1,
+  UIPrefab: {fileID: 8989081325999355841, guid: fd6e250db0a51014e9e3d27a94efd3a1,
     type: 3}
   UIWin: {fileID: 2979748007891714246, guid: 6aee22676321e624b8fba731bbbdde1d, type: 3}
   key: 27

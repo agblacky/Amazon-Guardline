@@ -79,8 +79,6 @@ public class IngameUI : MonoBehaviour
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
-        //Quit current scene
-        KillScene();
         //Resume Game
         ResumeGame();
     }

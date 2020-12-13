@@ -22,10 +22,12 @@ public class UIButtons : MonoBehaviour
     {
         canvas.GetComponent<IngameUI>().ReturnToMainMenu();
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     public void LoadScene()
     {
         SceneManager.LoadScene("Game");
-        //Quit current scene
-        Application.Quit();
     }
 }
