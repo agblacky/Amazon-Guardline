@@ -72,10 +72,6 @@ public class IngameUI : MonoBehaviour
         //Start New Scene
         LoadScene("MainMenu");
     }
-    void KillScene()
-    {
-        Application.Quit();
-    }
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);

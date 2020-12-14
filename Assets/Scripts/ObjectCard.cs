@@ -25,8 +25,12 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     {
         if (!(gameObject.GetComponent<CoolDown>().isCooldown))
         {
-            //Object follows curser on drag
-            objectDragInstance.transform.position = Input.mousePosition;
+            if (text.GetComponent<Shop>().checkCurrency(this.cost))
+            {
+                //Object follows curser on drag
+                objectDragInstance.transform.position = Input.mousePosition;
+            }
+                
         }
         
     }
@@ -35,12 +39,16 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     {
         if (!((gameObject.GetComponent<CoolDown>().isCooldown)))
         {
-            //Create instance of gameobject on click
-            objectDragInstance = Instantiate(object_Drag, canvas.transform);
-            objectDragInstance.transform.position = Input.mousePosition;
-            objectDragInstance.GetComponent<ObjectDragging>().card = this;
+            if (text.GetComponent<Shop>().checkCurrency(this.cost))
+            {
+                //Create instance of gameobject on click
+                objectDragInstance = Instantiate(object_Drag, canvas.transform);
+                objectDragInstance.transform.position = Input.mousePosition;
+                objectDragInstance.GetComponent<ObjectDragging>().card = this;
 
-            gamemanager.draggingObject = objectDragInstance;
+                gamemanager.draggingObject = objectDragInstance;
+            }
+                
         }
         
     }
@@ -59,11 +67,12 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
                     //Set Cardcooldown
                     gameObject.GetComponent<CoolDown>().setCoolDown(this.coolDown);
                 }
+                gamemanager.draggingObject = null;
+                Destroy(objectDragInstance);
             }
             
 
-            gamemanager.draggingObject = null;
-            Destroy(objectDragInstance);
+            
             
         }
     }

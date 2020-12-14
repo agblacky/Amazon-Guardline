@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99aa4e24b02eccc45a57a718d81a2a46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 121a6fba7c66b184daa715294f5a1370, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -127,7 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 700
   damage: 25
-  movementSpeed: 0.1
 --- !u!50 &-974805458666552126
 Rigidbody2D:
   serializedVersion: 4
