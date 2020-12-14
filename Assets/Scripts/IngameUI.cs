@@ -17,10 +17,11 @@ public class IngameUI : MonoBehaviour
     public GameObject spawner4;
     public GameObject spawner5;
     private bool gameWon;
+    private AudioSource audioSource;
     private void Start()
     {
         spawnercontainer = GameObject.Find("Spawner");
-
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -41,6 +42,7 @@ public class IngameUI : MonoBehaviour
     }
     public void PauseGame()
     {
+        audioSource.Play();
         Time.timeScale = 0;
     }
 

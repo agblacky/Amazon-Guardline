@@ -14,11 +14,11 @@ public class UIButtons : MonoBehaviour
     {
         canvas.GetComponent<IngameUI>().CheckUI();
     }
-    void RestartGame()
+    public void RestartGame()
     {
         canvas.GetComponent<IngameUI>().RestartGame();
     }
-    void ReturnToMainMenu()
+    public void ReturnToMainMenu()
     {
         canvas.GetComponent<IngameUI>().ReturnToMainMenu();
     }

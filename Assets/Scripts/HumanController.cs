@@ -6,12 +6,14 @@ public class HumanController : MonoBehaviour
 {
     public int health;
     public int damage;
-    private float movementSpeed; //-15
+    private float movementSpeed;
     private bool isColliding;
     private float damageCooldown=1.0f;
+    private AudioSource audioSource;
     private void Start()
     {
         movementSpeed = GameObject.Find("Canvas").GetComponent<RectTransform>().rect.width / -100;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -60,5 +62,6 @@ public class HumanController : MonoBehaviour
         else{
             this.health -= damage;
         }
+        audioSource.Play();
     }
 }
