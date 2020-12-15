@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIButtons : MonoBehaviour
 {
     private GameObject canvas;
+    public GameObject uiPrefab;
     private void Start()
     {
         canvas = GameObject.Find("Canvas");
@@ -29,5 +30,9 @@ public class UIButtons : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene("Game");
+    }
+    public void Options()
+    {
+        Instantiate(this.uiPrefab, transform);
     }
 }
