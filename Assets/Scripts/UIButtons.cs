@@ -35,4 +35,8 @@ public class UIButtons : MonoBehaviour
     {
         Instantiate(this.uiPrefab, transform);
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

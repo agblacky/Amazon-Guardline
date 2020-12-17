@@ -31,7 +31,7 @@ public class HumanSpawner : MonoBehaviour
                         GameObject humanInstance = Instantiate(prefabs[(int)human.humanType], transform.GetChild(spawner).transform);
                         transform.GetChild(spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
                         human.isSpawned = true;
-                        gameObject.GetComponent<CoolDown>().setCoolDown(Random.Range(3, 10));
+                        gameObject.GetComponent<CoolDown>().setCoolDown(Random.Range(5, 20));
                         counter++;
                     }
                 }
