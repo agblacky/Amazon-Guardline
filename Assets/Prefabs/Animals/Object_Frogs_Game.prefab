@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2325805656949560323}
   - component: {fileID: 5307995097220842180}
   - component: {fileID: 7333431819076025431}
+  - component: {fileID: -4302462271667586221}
   m_Layer: 13
   m_Name: Object_Frogs_Game
   m_TagString: Untagged
@@ -130,3 +131,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+--- !u!95 &-4302462271667586221
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395504569961223373}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9b51018896dca745996b2b4066860a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

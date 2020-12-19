@@ -13,6 +13,7 @@ public class AnimalController : MonoBehaviour
     public bool isClassic;
     public bool isDestroy;
     public float coolDown;
+    public Animator animator;
     private void Update()
     {
         if (humans.Count > 0)
@@ -21,10 +22,12 @@ public class AnimalController : MonoBehaviour
         }
         if (toAttack != null)
         {
+            
             if (isClassic)
             {
                 if (!(gameObject.GetComponent<CoolDown>().isCooldown))
                 {
+                    animator.SetBool("Attack", true);
                     //Create Bullet
                     GameObject bulletInstance = Instantiate(bullet, transform);
                     //Inherit damage
@@ -61,5 +64,9 @@ public class AnimalController : MonoBehaviour
             //Receive damage if not below zero
             this.health -= damage;
         }
+    }
+    public void SetAnimation()
+    {
+        animator.SetBool("Attack", false);
     }
 }

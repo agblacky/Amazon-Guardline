@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2870617442068367166}
   - component: {fileID: -4894673080861719656}
   - component: {fileID: 6495639178535207869}
+  - component: {fileID: -8190032929201041699}
   m_Layer: 10
   m_Name: Object_Snake_Game
   m_TagString: Untagged
@@ -123,6 +124,7 @@ MonoBehaviour:
   isClassic: 1
   isDestroy: 0
   coolDown: 2
+  animator: {fileID: -8190032929201041699}
 --- !u!114 &6495639178535207869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +138,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+--- !u!95 &-8190032929201041699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9083844758473597171}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1eea38a923128ba458e374cc4c5aa4ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

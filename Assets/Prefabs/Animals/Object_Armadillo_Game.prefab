@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4685651487610237272}
   - component: {fileID: 1354772071735444011}
   - component: {fileID: 4996989242971943067}
+  - component: {fileID: -7250367584397320777}
   m_Layer: 10
   m_Name: Object_Armadillo_Game
   m_TagString: Untagged
@@ -121,3 +122,23 @@ MonoBehaviour:
   damageValue: 1000
   isClassic: 0
   isDestroy: 0
+  coolDown: 0
+--- !u!95 &-7250367584397320777
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131527002241024741}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88ba8e4a19bb2f04fb04411231c7ebc7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

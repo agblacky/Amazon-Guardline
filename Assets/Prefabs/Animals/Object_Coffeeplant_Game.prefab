@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6106964710796115761}
   - component: {fileID: 6916320397501908418}
   - component: {fileID: -7054495502186345660}
+  - component: {fileID: -3395637115934698774}
   m_Layer: 10
   m_Name: Object_Coffeeplant_Game
   m_TagString: Untagged
@@ -130,3 +131,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+--- !u!95 &-3395637115934698774
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600560213295284223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a2bbcbf5e725c74384f959375c40d5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
