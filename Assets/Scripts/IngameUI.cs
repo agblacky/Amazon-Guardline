@@ -22,6 +22,7 @@ public class IngameUI : MonoBehaviour
     {
         spawnercontainer = GameObject.Find("Spawner");
         audioSource = gameObject.GetComponent<AudioSource>();
+        AudioListener.volume = PlayerPrefs.GetFloat("VolumePreference");
     }
     private void Update()
     {

@@ -880,7 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09e9b90433f8694d96aef8f4e3a3e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPrefab: {fileID: 5973537810167008132, guid: 123fb21b53a893a4fa2fd63df3b952fa,
+  uiPrefab: {fileID: 7975040495574470787, guid: 123fb21b53a893a4fa2fd63df3b952fa,
     type: 3}
 --- !u!1 &1646819612
 GameObject:

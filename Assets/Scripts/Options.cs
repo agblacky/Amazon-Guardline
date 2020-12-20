@@ -8,12 +8,12 @@ using UnityEngine.UI;
 public class Options : MonoBehaviour
 {
     public Dropdown resolutionDropdown;
-    public Slider volumeSlider;
+    private Slider volumeSlider;
     Resolution[] resolutions;
-    public AudioMixer audioMixer;
     float currentVolume;
     private void Start()
     {
+        volumeSlider = GameObject.Find("Volume").GetComponent<Slider>();
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
         resolutions = Screen.resolutions;
@@ -35,15 +35,16 @@ public class Options : MonoBehaviour
         PlayerPrefs.SetInt("ResolutionPreference",resolutionDropdown.value);
         PlayerPrefs.SetInt("FullscreenPreference",Convert.ToInt32(Screen.fullScreen));
         PlayerPrefs.SetFloat("VolumePreference", currentVolume);
+        
     }
-    public void SetVolume(float volume)
+    public void SetVolume()
     {
-        audioMixer.SetFloat("Volume", volume);
-        currentVolume = volume;
+        this.currentVolume = volumeSlider.value;
+        AudioListener.volume = currentVolume;
     }
-    public void SetFullscreen(bool isFullscreen)
+    public void SetFullscreen()
     {
-        Screen.fullScreen = isFullscreen;
+        Screen.fullScreen = GameObject.Find("Toggle").GetComponent<Toggle>().isOn;
     }
     public void SetResolution(int resolutionIndex)
     {
@@ -62,9 +63,12 @@ public class Options : MonoBehaviour
         else
             Screen.fullScreen = true;
         if (PlayerPrefs.HasKey("VolumePreference"))
+        {
             volumeSlider.value = PlayerPrefs.GetFloat("VolumePreference");
+            AudioListener.volume = PlayerPrefs.GetFloat("VolumePreference");
+        }
         else
-            volumeSlider.value = PlayerPrefs.GetFloat("VolumePreference");
+            volumeSlider.value = 1;
     }
     public void CloseSettings(bool save)
     {
