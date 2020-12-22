@@ -9,6 +9,7 @@ public class FrogController : MonoBehaviour
     public int damageValue;
     private bool isAttacking;
     List<Collider2D> collisions = new List<Collider2D>();
+    public Animator animator;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,6 +33,7 @@ public class FrogController : MonoBehaviour
         {
             if (!(gameObject.GetComponent<CoolDown>().isCooldown))
             {
+                animator.SetBool("Attack", true);
                 //Damage all enemies in list
                 foreach (Collider2D collision in collisions)
                 {
@@ -47,6 +49,10 @@ public class FrogController : MonoBehaviour
     {
         //Remove exiting objects from attacklist
         collisions.Remove(collision);
+    }
+    public void SetAnimation()
+    {
+        animator.SetBool("Attack", false);
     }
 
 }
