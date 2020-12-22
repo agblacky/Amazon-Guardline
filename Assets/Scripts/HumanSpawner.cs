@@ -12,6 +12,7 @@ public class HumanSpawner : MonoBehaviour
     {
         for (int i = 0; i < humans.Count; ++i)
         {
+            //Fill list with random generated human types
             humans[i].humanType = GetRandomHumanType();
         }
     }
@@ -27,8 +28,11 @@ public class HumanSpawner : MonoBehaviour
                     Human human = humans[counter];
                     if (human.isSpawned == false)
                     {
+                        //Random spawner
                         spawner = Random.Range(0, 5);
+                        //Instantiate
                         GameObject humanInstance = Instantiate(prefabs[(int)human.humanType], transform.GetChild(spawner).transform);
+                        //Add to spawner
                         transform.GetChild(spawner).GetComponent<SpawnPoint>().humans.Add(humanInstance);
                         human.isSpawned = true;
                         gameObject.GetComponent<CoolDown>().setCoolDown(Random.Range(5, 20));
@@ -44,6 +48,7 @@ public class HumanSpawner : MonoBehaviour
     }
     private HumanType GetRandomHumanType()
     {
+        //Random enum get
         HumanType type = (HumanType)Random.Range(0, System.Enum.GetNames(typeof(HumanType)).Length);
         return type;
     }

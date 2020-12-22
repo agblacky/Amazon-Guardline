@@ -10,8 +10,10 @@ public class HumanController : MonoBehaviour
     private bool isColliding;
     private float damageCooldown=1.0f;
     private AudioSource audioSource;
+    public Animator animator;
     private void Start()
     {
+        //Calculate Movement speed according to screen resolution
         movementSpeed = GameObject.Find("Canvas").GetComponent<RectTransform>().rect.width / -100;
         audioSource = gameObject.GetComponent<AudioSource>();
     }
@@ -27,6 +29,7 @@ public class HumanController : MonoBehaviour
     {
         if (collision.gameObject.layer == 10)
         {
+            //Start attacking routine
             StartCoroutine(Attack(collision));
             isColliding = true;
         }
@@ -35,6 +38,7 @@ public class HumanController : MonoBehaviour
     {
         if (collision != null)
         {
+            animator.SetBool("Attack", true);
             if (!collision.gameObject.GetComponent<PlantController>())
             {
                 collision.gameObject.GetComponent<AnimalController>().ReceiveDamage(damage);
@@ -63,5 +67,9 @@ public class HumanController : MonoBehaviour
             this.health -= damage;
         }
         audioSource.Play();
+    }
+    public void SetAnimation()
+    {
+        animator.SetBool("Attack", false);
     }
 }

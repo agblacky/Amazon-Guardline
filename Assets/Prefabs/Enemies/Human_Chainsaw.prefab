@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3711868866019347406}
-  - component: {fileID: 6184704052076613143}
   - component: {fileID: 4575862778919301876}
   - component: {fileID: 3937073470003388878}
   - component: {fileID: 5396751224348292184}
   - component: {fileID: 6560265006743543438}
   - component: {fileID: 7763249531973688144}
+  - component: {fileID: 6184704052076613143}
   - component: {fileID: 7275481481936675081}
   m_Layer: 11
   m_Name: Human_Chainsaw
@@ -42,20 +42,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6184704052076613143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478649087336399936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e918a45140645a4cbc73d6ee676c8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 500
-  damage: 150
 --- !u!50 &4575862778919301876
 Rigidbody2D:
   serializedVersion: 4
@@ -237,6 +223,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6184704052076613143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478649087336399936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e918a45140645a4cbc73d6ee676c8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
+  damage: 150
+  animator: {fileID: 7275481481936675081}
 --- !u!95 &7275481481936675081
 Animator:
   serializedVersion: 3

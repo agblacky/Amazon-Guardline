@@ -13,12 +13,14 @@ public class Options : MonoBehaviour
     float currentVolume;
     private void Start()
     {
+        //Get Volume Slider
         volumeSlider = GameObject.Find("Volume").GetComponent<Slider>();
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
         resolutions = Screen.resolutions;
         int currentResolutionIndex = 0;
 
+        //Fill Resolution Dropdown
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + " x " + resolutions[i].height;
@@ -28,14 +30,15 @@ public class Options : MonoBehaviour
         }
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.RefreshShownValue();
+        //Load saved settings
         LoadSettings(currentResolutionIndex);
     }
     public void SaveSettings()
     {
+        //Save all Settings in Playerprefs
         PlayerPrefs.SetInt("ResolutionPreference",resolutionDropdown.value);
         PlayerPrefs.SetInt("FullscreenPreference",Convert.ToInt32(Screen.fullScreen));
         PlayerPrefs.SetFloat("VolumePreference", currentVolume);
-        
     }
     public void SetVolume()
     {
@@ -54,6 +57,7 @@ public class Options : MonoBehaviour
 
     public void LoadSettings(int currentResolutionIndex)
     {
+        //Check if Playerpref Key already has been set and change settings accordingly
         if (PlayerPrefs.HasKey("ResolutionPreference"))
             resolutionDropdown.value = PlayerPrefs.GetInt("ResolutionPreference");
         else

@@ -29,6 +29,7 @@ public class CoolDown : MonoBehaviour
         {
             try
             {
+                //Cardfill for Cooldown Visualisation
                 image.fillAmount -= 1 / coolDown * Time.deltaTime;
 
                 if (image.fillAmount <= 0)

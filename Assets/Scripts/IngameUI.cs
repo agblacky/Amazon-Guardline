@@ -30,6 +30,7 @@ public class IngameUI : MonoBehaviour
         {
             CheckUI();
         }
+        //Check for gamewin
         if (spawnercontainer.GetComponent<HumanSpawner>().counter == spawnercontainer.GetComponent<HumanSpawner>().humans.Count && spawner1.GetComponent<SpawnPoint>().humans.Count==0&& spawner2.GetComponent<SpawnPoint>().humans.Count == 0 && spawner3.GetComponent<SpawnPoint>().humans.Count == 0 && spawner4.GetComponent<SpawnPoint>().humans.Count == 0 && spawner5.GetComponent<SpawnPoint>().humans.Count == 0)
         {
             if (!(gameWon))
@@ -53,6 +54,7 @@ public class IngameUI : MonoBehaviour
     }
     public void CheckUI()
     {
+        //Check if UI already has been Instantiated
         if (uiInstance)
         {
             Destroy(uiInstance);

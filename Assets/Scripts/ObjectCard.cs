@@ -30,9 +30,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
                 //Object follows curser on drag
                 objectDragInstance.transform.position = Input.mousePosition;
             }
-                
-        }
-        
+        } 
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -70,10 +68,6 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
                 gamemanager.draggingObject = null;
                 Destroy(objectDragInstance);
             }
-            
-
-            
-            
         }
     }
 }
