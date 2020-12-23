@@ -23,6 +23,7 @@ public class PlantController : MonoBehaviour
         if (this.health - damage <= 0)
         {
             //Destroy Gameobject if smaller or equal than zero
+            gameObject.transform.parent.GetComponent<ObjectContainer>().isfull = false;
             Destroy(this.gameObject);
         }
         else

@@ -19,7 +19,7 @@ public class HumanSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (0 <= Time.timeSinceLevelLoad)
+        if (40 <= Time.timeSinceLevelLoad)
         {
             if (!(gameObject.GetComponent<CoolDown>().isCooldown))
             {

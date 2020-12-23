@@ -120,7 +120,7 @@ MonoBehaviour:
   bullet: {fileID: 3801488757575766496, guid: f20eb0061091f6c4a8e9de9213afb0c7, type: 3}
   humans: []
   toAttack: {fileID: 0}
-  damageValue: 100
+  damageValue: 50
   isClassic: 1
   isDestroy: 0
   coolDown: 2
