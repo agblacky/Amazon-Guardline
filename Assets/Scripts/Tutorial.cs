@@ -13,21 +13,21 @@ public class Tutorial : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("TutorialDone"))
         {
-            SceneManager.LoadScene("MainMenu");
+            if (PlayerPrefs.GetInt("ResolutionPreference") == 1)
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+            
         }
-        else
-        {
-            canvas = this.gameObject;
-            canvas.GetComponent<Image>().color = new Color(256, 256, 256);
-            GameObject.Find("Button").transform.SetParent(canvas.transform);
-            Next();
+        canvas = this.gameObject;
+        canvas.GetComponent<Image>().color = new Color(256, 256, 256);
+        GameObject.Find("Button").transform.SetParent(canvas.transform);
+        Next();
 
-        }
-        
     }
     public void Next()
     {
-        if (counter == images.Count - 1)
+        if (counter == images.Count)
         {
             PlayerPrefs.SetInt("TutorialDone", 1);
             SceneManager.LoadScene("MainMenu");

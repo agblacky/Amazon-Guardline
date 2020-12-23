@@ -39,4 +39,9 @@ public class UIButtons : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void Tutorial()
+    {
+        PlayerPrefs.SetInt("TutorialDone", 0);
+        SceneManager.LoadScene("Tutorial");
+    }
 }
